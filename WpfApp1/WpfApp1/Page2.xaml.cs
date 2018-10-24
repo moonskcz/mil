@@ -20,9 +20,21 @@ namespace WpfApp1
     /// </summary>
     public partial class Page2 : Page
     {
+        private Frame frame;
         public Page2()
         {
             InitializeComponent();
+
         }
+
+        public Page2(Frame frame) : this()
+        {
+            this.frame = frame;
+        }
+
+        /*private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(new Page3(frame));
+        }*/
     }
 }

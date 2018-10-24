@@ -23,6 +23,9 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+
+            this.myFrame.Navigate(new Page1(myFrame));
+
         }
     }
 }
