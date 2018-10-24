@@ -20,8 +20,11 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainLogic mL;
         public MainWindow()
         {
+            mL = new MainLogic();
+
             InitializeComponent();
 
             this.myFrame.Navigate(new Page1(myFrame));
