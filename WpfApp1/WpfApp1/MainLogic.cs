@@ -16,7 +16,15 @@ namespace WpfApp1
 
         public Question Q;
 
-        public List<List<List<string>>> t;
+        public int Level = 0;
+
+        public MainLogic (MainLogic ML)
+        {
+            FL = ML.FL;
+            UIC = ML.UIC;
+            Q = ML.Q;
+            Level = ML.Level;
+        }
 
         public MainLogic (UICaretaker uIC)
         {
@@ -25,12 +33,11 @@ namespace WpfApp1
 
         public List<string> MakeQuestions ()
         {
-
-            Q = new Question();
+            Random rnd = new Random();
 
             List<List<Question>> questions = FL.LoadQ();
 
-
+            Q = questions[((Level / 5) + 1)][rnd.Next(0, 2)];
 
             return new List<string>();
 
