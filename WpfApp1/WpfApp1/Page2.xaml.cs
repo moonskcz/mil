@@ -20,10 +20,16 @@ namespace WpfApp1
     /// </summary>
     public partial class Page2 : Page
     {
+        private UICaretaker UIC = new UICaretaker();
+
+        private MainLogic MC;
+
         private Frame frame;
         public Page2()
         {
             InitializeComponent();
+
+            MC = new MainLogic(UIC);
 
         }
 

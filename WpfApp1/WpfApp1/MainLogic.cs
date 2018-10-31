@@ -10,27 +10,37 @@ namespace WpfApp1
 
     class MainLogic
     {
+        public FileWorker FL = new FileWorker();
 
-        public UICaretaker UIC = new UICaretaker();
+        public UICaretaker UIC;
 
-        public Question q;
+        public Question Q;
 
-        public List<string> DoThemFuckingQuestions ()
+        public List<List<List<string>>> t;
+
+        public MainLogic (UICaretaker uIC)
         {
-            return new List<string>();
+            UIC = uIC;
         }
 
+        public List<string> MakeQuestions ()
+        {
+
+            Q = new Question();
+
+            List<List<Question>> questions = FL.LoadQ();
+
+
+
+            return new List<string>();
+
+        }
+        
         /*
         public void LoadQuestions (string path)
         {
 
-            List<List<List<string>>> qaLevels = List<List<List<string>>>();
-
-            List<List<string>> qa = new List<List<string>>();
-
-            List<>
-            qa.Add
-
+            List<List<List<string>>> qaLevels = new List<List<List<string>>>();
 
             var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
 

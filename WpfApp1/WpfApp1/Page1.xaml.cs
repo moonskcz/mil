@@ -25,6 +25,10 @@ namespace WpfApp1
         {
             InitializeComponent();
 
+            FileWorker fW = new FileWorker();
+            fW.SaveGame();
+            fW.LoadQ();
+
         }
 
         public Page1(Frame frame) : this()

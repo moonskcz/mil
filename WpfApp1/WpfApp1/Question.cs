@@ -11,16 +11,18 @@ namespace WpfApp1
 
         public string Q;
         public List<string> A = new List<string>();
+        public int C;
 
         public Question ()
         {
 
         }
 
-        public Question (string q, List<string> a)
+        public Question (string q, List<string> a, int c)
         {
             Q = q;
             A = a;
+            C = c;
         }
 
     }

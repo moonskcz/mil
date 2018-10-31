@@ -9,7 +9,15 @@ namespace WpfApp1
     class UICaretaker
     {
 
+        public UICaretaker ()
+        {
 
+        }
+
+        public void UpdateQButtons (Question Q)
+        {
+
+        }
 
     }
 }

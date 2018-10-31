@@ -23,7 +23,7 @@ namespace WpfApp1
         private MainLogic mL;
         public MainWindow()
         {
-            mL = new MainLogic();
+            mL = new MainLogic(new UICaretaker());
 
             InitializeComponent();
 
