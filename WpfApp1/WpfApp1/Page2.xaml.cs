@@ -20,13 +20,15 @@ namespace WpfApp1
     /// </summary>
     public partial class Page2 : Page
     {
-        private UICaretaker UIC = new UICaretaker();
+        private UICaretaker UIC;
 
         private MainLogic MC;
 
         private Frame frame;
         public Page2()
         {
+            UIC = new UICaretaker(but1, but2, but3, but4, label1);
+
             InitializeComponent();
 
             MC = new MainLogic(UIC);
@@ -36,6 +38,16 @@ namespace WpfApp1
         public Page2(Frame frame) : this()
         {
             this.frame = frame;
+        }
+
+        public void UpdateButtons()
+        {
+
+        }
+
+        private void but2_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         /*private void Button_Click(object sender, RoutedEventArgs e)
