@@ -18,6 +18,8 @@ namespace WpfApp1
 
         public int Level = 0;
 
+        public Random Rnd = new Random();
+
         public MainLogic (MainLogic ML)
         {
             FL = ML.FL;
@@ -31,18 +33,44 @@ namespace WpfApp1
             UIC = uIC;
         }
 
-        public List<string> MakeQuestions ()
+        public Question MakeQuestions ()
         {
-            Random rnd = new Random();
 
             List<List<Question>> questions = FL.LoadQ();
 
-            Q = questions[((Level / 5) + 1)][rnd.Next(0, 2)];
+            //Q = questions[0][rnd.Next(0, 2)];
+            Q = questions[(Level / 5)][Rnd.Next(0, 2)];
 
-            return new List<string>();
+            return Q;
 
         }
-        
+
+        public bool EvaluateQuestion(object sender)
+        {
+           
+            if (sender.ToString() == Q.A[Q.C])
+            {
+                Level++;
+
+                if (Level == 15)
+                {
+                    End();
+                }
+
+                return true;
+            } else
+            {
+                End();
+                return false;
+            }
+
+            
+        }
+
+        public void End ()
+        {
+            //todo
+        }
         /*
         public void LoadQuestions (string path)
         {

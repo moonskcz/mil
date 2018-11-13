@@ -14,7 +14,7 @@ namespace WpfApp1
         public object Button3;
         public object Button4;
 
-        public object QuestionLabel;
+        public object LabelText;
 
 
         public UICaretaker ()
@@ -29,7 +29,7 @@ namespace WpfApp1
             Button3 = but3;
             Button4 = but4;
 
-            Button1 = but1;
+            LabelText = labelText;
 
         }
 

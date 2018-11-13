@@ -24,6 +24,10 @@ namespace WpfApp1
 
         private MainLogic MC;
 
+        private Question Q;
+
+        private int C;
+
         private Frame frame;
         public Page2()
         {
@@ -32,6 +36,10 @@ namespace WpfApp1
             InitializeComponent();
 
             MC = new MainLogic(UIC);
+
+            Q = MC.MakeQuestions();
+
+            UpdateButtons();
 
         }
 
@@ -42,12 +50,24 @@ namespace WpfApp1
 
         public void UpdateButtons()
         {
-
+            but1.Content = Q.A[0];
+            but2.Content = Q.A[1];
+            but3.Content = Q.A[2];
+            but4.Content = Q.A[3];
+            label1.Content = Q.Q;
+            label2.Content = MC.Level;
+            C = Q.C;
         }
 
-        private void but2_Click(object sender, RoutedEventArgs e)
+        private void but_Click(object sender, RoutedEventArgs e)
         {
-
+            Button content = sender as Button;
+            
+            if (MC.EvaluateQuestion(content.Content))
+            {
+                Q = MC.MakeQuestions();
+                UpdateButtons();
+            }
         }
 
         /*private void Button_Click(object sender, RoutedEventArgs e)

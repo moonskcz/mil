@@ -27,7 +27,7 @@ namespace WpfApp1
 
             var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
 
-            List<List<Question>> tmp = JsonConvert.DeserializeObject <List<List<Question>>> (newJson, settings);
+            List<List<Question>> tmp = JsonConvert.DeserializeObject <List<List<Question>>> (newJson);
 
             return tmp;
         }
@@ -61,10 +61,12 @@ namespace WpfApp1
             questions.Add(tmp);
 
             qTier.Add(questions);
+            qTier.Add(questions);
+            qTier.Add(questions);
 
             var settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
 
-            string json = JsonConvert.SerializeObject(qTier, settings);
+            string json = JsonConvert.SerializeObject(qTier);
 
             System.IO.File.WriteAllText(@"C:\cs\bagilionn\WpfApp1\WpfApp1\bin\Debug\data.json", json);
 

@@ -26,7 +26,7 @@ namespace WpfApp1
             InitializeComponent();
 
             FileWorker fW = new FileWorker();
-            fW.SaveGame();
+            //fW.SaveGame();
             fW.LoadQ();
 
         }

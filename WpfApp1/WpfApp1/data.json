@@ -1,29 +1,48 @@
 {
-  "l1": {
+  "1": {
     "1": {
       "q": "HEIL",
       "a1": "Mussolin",
       "a2": "Chapiro",
       "a3": "Doom guy",
-      "a4":  "The H guy"
+      "a4": "The H guy",
+      "c": "3"
+    },
+    "2": {
+      "q": "GIBT",
+      "a1": "Mussolin",
+      "a2": "Chapiro",
+      "a3": "Doom guy",
+      "a4": "The H guy",
+      "c": "3"
+    },
+    "3": {
+      "q": "LEEP",
+      "a1": "Mussolin",
+      "a2": "Chapiro",
+      "a3": "Doom guy",
+      "a4": "The H guy",
+      "c": "3"
     }
   },
-  "l2": {
+  "2": {
     "1": {
       "q": "fggfdger",
       "a1": "Masdfasfussolin",
       "a2": "Chapifafafro",
       "a3": "Doom fwefefwf guy",
-      "a4": "The ewfwegweg H wegwgwegegw guy"
+      "a4": "The ewfwegweg H wegwgwegegw guy",
+      "c" : "2"
     }
   },
-  "l3": {
+  "3": {
     "1": {
       "q": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
       "a1": "Mussolinqqqqqqqqqqqqq",
       "a2": "Chapiroqqqqqqqqqqqqqqq",
       "a3": "Doom guyqqqqqqqqqq",
-      "a4": "The H guyqqqqqqqqqqqqqqqqqq"
+      "a4": "The H guyqqqqqqqqqqqqqqqqqq",
+      "c" : "0"
     }
   }
 }
