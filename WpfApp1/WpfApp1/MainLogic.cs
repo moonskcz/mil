@@ -55,6 +55,7 @@ namespace WpfApp1
                 if (Level == 15)
                 {
                     End();
+                    return false;
                 }
 
                 return true;

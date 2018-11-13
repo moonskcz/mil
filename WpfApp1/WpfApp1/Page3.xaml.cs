@@ -25,6 +25,8 @@ namespace WpfApp1
         {
             InitializeComponent();
 
+
+
         }
 
         public Page3(Frame frame) : this()

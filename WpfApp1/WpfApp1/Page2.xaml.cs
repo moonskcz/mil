@@ -67,6 +67,9 @@ namespace WpfApp1
             {
                 Q = MC.MakeQuestions();
                 UpdateButtons();
+            } else
+            {
+                frame.Navigate(new Page3(frame));
             }
         }
 
